@@ -95,7 +95,10 @@ export const ChakChakApp = () => {
       formData.append('fashion_image', file);
       formData.append('mode', searchMode);
 
-      const res = await fetch('http://127.0.0.1:8000/api/v1/chakchak/analyze', {
+      const res = await fetch('https://chakchak-backend.onrender.com/api/v1/chakchak/analyze', {
+  method: 'POST',
+  body: formData,
+});
         method: 'POST',
         body: formData,
       });
