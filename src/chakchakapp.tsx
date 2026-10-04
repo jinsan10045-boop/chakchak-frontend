@@ -95,10 +95,7 @@ export const ChakChakApp = () => {
       formData.append('fashion_image', file);
       formData.append('mode', searchMode);
 
-      const res = await fetch('https://chakchak-backend.onrender.com/api/v1/chakchak/analyze', {
-  method: 'POST',
-  body: formData,
-});
+            const res = await fetch('https://chakchak-backend.onrender.com/api/v1/chakchak/analyze', {
         method: 'POST',
         body: formData,
       });
@@ -113,6 +110,7 @@ export const ChakChakApp = () => {
       console.error(err);
       showToast('⚠️ FastAPI 백엔드 서버 연결을 확인해주세요.');
     } finally {
+
       setAnalyzing(false);
     }
   };
