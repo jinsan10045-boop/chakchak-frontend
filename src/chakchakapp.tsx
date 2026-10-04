@@ -110,11 +110,9 @@ export const ChakChakApp = () => {
       console.error(err);
       showToast('⚠️ FastAPI 백엔드 서버 연결을 확인해주세요.');
     } finally {
-
       setAnalyzing(false);
     }
   };
-
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
